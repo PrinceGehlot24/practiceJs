@@ -46,3 +46,6 @@ class SavingAccount extends BankAccount {
         this.deposits(interest)
     }
 }
+
+let aman = new SavingAccount("aman", "99876897")
+console.log(aman)
