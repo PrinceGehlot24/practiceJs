@@ -33,3 +33,16 @@ account1.deposits(2000)
 account1.withdraw(1500)
 
 console.log(account1, "account1")
+
+
+class SavingAccount extends BankAccount {
+    constructor(accountHolder, accountNumber, balance=0, interestRate=0.01){
+        super(accountHolder, accountNumber, balance)
+        this.interestRate = interestRate
+    }
+
+    addInterest(){
+        const interest = this.balance * this.interestRate
+        this.deposits(interest)
+    }
+}
